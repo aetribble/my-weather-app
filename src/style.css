@@ -1,0 +1,84 @@
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background-color: #eaf6f6;
+  font-size: 1.25em;
+}
+
+.content {
+  margin: 4em auto;
+  text-align: center;
+  background-color: #fcfefe;
+  color: #000000;
+  max-width: 600px;
+  border: 1px solid #0b7f7f;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+a {
+  color: #ff2e63;
+}
+
+h1 {
+font-size: 2.5em;
+}
+
+footer {
+  font-size: 0.7em;
+  margin: 2em 0 0 0;
+}
+
+p {
+  margin: 0.25em 0;
+}
+
+/*Search elements*/
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-city {
+  background-color: #eaf6f6;
+  border-radius: 2px;
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 1em;
+  transition: all 100ms ease-in-out;
+}
+
+#search-city:focus {
+  box-shadow: 0 0 0 5px #ff2e63;
+}
+
+#search-btn {
+  background-color: #0b7f7f;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #0b7f7f;
+  padding: 0.25em;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-left: 0.5em;
+  width: 30%;
+}
+
+/*Forecast elements*/
+
+.temp {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+.degrees {
+  font-size: 0.35em;
+  position: relative;
+  top: -1.4em;
+  left: -0.6em;
+}
+
+strong {
+  color: #0b7f7f;
+}
