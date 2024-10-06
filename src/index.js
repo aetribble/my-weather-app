@@ -38,10 +38,16 @@ let date = document.querySelector("#date");
 date.innerHTML = `${formatDate(currentTime)}`;
 
 function refreshWeather(response) {
-  let weatherElement = document.querySelector("#weather");
+  let temperatureElement = document.querySelector("#weather");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  let descriptionElement = document.querySelector("#description");
   console.log(response);
-  let weather = Math.round(response.data.temperature.current);
-  weatherElement.innerHTML = `${weather}`;
+  let temperature = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = `${temperature}`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}`;
+  windElement.innerHTML = `${response.data.wind.speed}`;
+  descriptionElement.innerHTML = `${response.data.condition.description}`;
 }
 
 function searchCity(city) {
