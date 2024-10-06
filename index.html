@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </head>
 <body>
   <div class="content">
@@ -22,7 +23,7 @@
   <main>
     <h1>City</h1>
     <p id="date">Monday 10 September, 10:15</p>
-    <p class="temp">☀️ 14 <span class="degrees">°C</span></p>
+    <p class="temp">☀️ <span id="weather">14</span> <span class="degrees">°C</span></p>
     <p>Weather description</p>
     <p>Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong></p>
   </main>

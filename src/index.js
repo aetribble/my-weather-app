@@ -37,11 +37,25 @@ return formattedDate;
 let date = document.querySelector("#date");
 date.innerHTML = `${formatDate(currentTime)}`;
 
+function refreshWeather(response) {
+  let weatherElement = document.querySelector("#weather");
+  console.log(response);
+  let weather = Math.round(response.data.temperature.current);
+  weatherElement.innerHTML = `${weather}`;
+}
+
+function searchCity(city) {
+  let apiKey = "0f30449f44055eof3b03aea49561c8dt";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(refreshWeather);
+}
+
 function userSearch(event) {
 event.preventDefault();
 let searchInput = document.querySelector("#search-city");
 let cityElement = document.querySelector("h1");
 cityElement.innerHTML = `${searchInput.value}`;
+searchCity(searchInput.value);
 }
 
 let search = document.querySelector("form");
