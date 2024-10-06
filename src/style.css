@@ -72,6 +72,11 @@ form {
   font-weight: 700;
 }
 
+.weather-icon {
+position: relative;
+top: 1.5em;
+}
+
 .degrees {
   font-size: 0.35em;
   position: relative;
@@ -81,4 +86,9 @@ form {
 
 strong {
   color: #0b7f7f;
+}
+
+div.temperature {
+  display: flex;
+  justify-content:center;
 }

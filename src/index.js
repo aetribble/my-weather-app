@@ -44,11 +44,14 @@ function refreshWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let cityElement = document.querySelector("h1");
   let temperature = Math.round(response.data.temperature.current);
+  let iconElement = document.querySelector("#weather-icon");
+  let icon = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`
   temperatureElement.innerHTML = `${temperature}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}`;
   windElement.innerHTML = `${response.data.wind.speed}`;
   descriptionElement.innerHTML = `${response.data.condition.description}`;
   cityElement.innerHTML = `${response.data.city}`;
+  iconElement.innerHTML = `${icon}`;
 }
 
 function searchCity(city) {
