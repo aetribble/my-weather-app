@@ -42,12 +42,13 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let descriptionElement = document.querySelector("#description");
-  console.log(response);
+  let cityElement = document.querySelector("h1");
   let temperature = Math.round(response.data.temperature.current);
   temperatureElement.innerHTML = `${temperature}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}`;
   windElement.innerHTML = `${response.data.wind.speed}`;
   descriptionElement.innerHTML = `${response.data.condition.description}`;
+  cityElement.innerHTML = `${response.data.city}`;
 }
 
 function searchCity(city) {
@@ -59,8 +60,6 @@ function searchCity(city) {
 function userSearch(event) {
 event.preventDefault();
 let searchInput = document.querySelector("#search-city");
-let cityElement = document.querySelector("h1");
-cityElement.innerHTML = `${searchInput.value}`;
 searchCity(searchInput.value);
 }
 
