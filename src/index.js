@@ -1,5 +1,4 @@
 let currentTime = new Date();
-
 function formatDate(date) {
 let days = [
   "Sunday",
@@ -37,3 +36,13 @@ return formattedDate;
 }
 let date = document.querySelector("#date");
 date.innerHTML = `${formatDate(currentTime)}`;
+
+function userSearch(event) {
+event.preventDefault();
+let searchInput = document.querySelector("#search-city");
+let cityElement = document.querySelector("h1");
+cityElement.innerHTML = `${searchInput.value}`;
+}
+
+let search = document.querySelector("form");
+search.addEventListener("submit", userSearch);
