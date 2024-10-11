@@ -77,7 +77,7 @@ form {
 
 /*Current temperature elements*/
 
-div.current-weather {
+div.current-weather, div.weather-forecast, div.temp-forecast {
   display: flex;
   justify-content: space-between;
 }
@@ -102,4 +102,31 @@ strong {
 .weather-icon {
   position: relative;
   top: -1em;
+}
+
+/*Forecast elements*/
+
+.forecast-day {
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.forecast-day img {
+  max-width: 75px;
+}
+
+.high-temp {
+  color: #ff2e63;
+  font-weight: 700;
+}
+
+.low-temp {
+  color: rgba(255, 46, 99, 0.7);
+  font-weight: 700;
+}
+
+ .high-temp span, .low-temp span {
+  font-size: 0.7em;
+  position: relative;
+  top: -0.4em;
 }
