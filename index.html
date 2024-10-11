@@ -15,23 +15,36 @@
 <body>
   <div class="content">
   <header>
+    <p id="date">Monday 10 September, 10:15</p>
+    <hr/>
     <form>
     <input type="search" placeholder="Enter a city..." required id="search-city"/>
     <input type="submit" value="Search" id="search-btn"/>
     </form>
+    <hr/>
   </header>
   <main>
-    <h1>City</h1>
-    <p id="date">Monday 10 September, 10:15</p>
-    <div class="temperature">
-    <div id="weather-icon"></div>
-    <p class="temp">
-      <span id="weather">14</span> <span class="degrees">°C</span></p>
+    <div class="current-weather">
+      <div>
+        <h1>City</h1>
+        <p id="description">Weather description</p>
+        <p>Humidity: <strong><span id="humidity">87</span>%</strong>, Wind: <strong><span
+              id="wind-speed">7.2</span>m/s</strong>
+        </p>
+      </div>
+      <div>
+        <div class="temperature">
+        <p class="temp">
+          <span id="weather">14</span> <span class="degrees">°C</span>
+        </p>
+        </div>
+        <div id="weather-icon"><img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" alt="" class="weather-icon"></div>
+      </div>
     </div>
-    <p id="description">Weather description</p>
-    <p>Humidity: <strong><span id="humidity">87</span>%</strong>, Wind: <strong><span id="wind-speed">7.2</span>m/s</strong></p>
+    
   </main>
   <footer>
+    <hr/>
     Coded by <a href="https://github.com/aetribble">Amanda Tribble</a>, is on <a href="https://github.com/aetribble/my-weather-app">GitHub</a> and hosted on <a href="https://aetribble-weather.netlify.app/">Netlify</a>
   </footer>
   </div>

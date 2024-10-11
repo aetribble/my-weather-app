@@ -6,7 +6,6 @@ body {
 
 .content {
   margin: 4em auto;
-  text-align: center;
   background-color: #fcfefe;
   color: #000000;
   max-width: 600px;
@@ -26,13 +25,24 @@ font-size: 2.5em;
 footer {
   font-size: 0.7em;
   margin: 2em 0 0 0;
+  text-align: center;
 }
 
 p {
   margin: 0.25em 0;
 }
 
-/*Search elements*/
+hr {
+  border: 0.75px solid #0b7f7f;
+  margin: 1em 0;
+}
+
+/*Header elements*/
+
+header p {
+  text-align:left;
+  font-size: 0.75em;
+}
 
 form {
   display: flex;
@@ -65,16 +75,17 @@ form {
   width: 30%;
 }
 
-/*Forecast elements*/
+/*Current temperature elements*/
+
+div.current-weather {
+  display: flex;
+  justify-content: space-between;
+}
 
 .temp {
   font-size: 4em;
   font-weight: 700;
-}
-
-.weather-icon {
-position: relative;
-top: 1.5em;
+  margin-bottom: 0;
 }
 
 .degrees {
@@ -88,7 +99,7 @@ strong {
   color: #0b7f7f;
 }
 
-div.temperature {
-  display: flex;
-  justify-content:center;
+.weather-icon {
+  position: relative;
+  top: -1em;
 }
